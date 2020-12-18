@@ -5,3 +5,8 @@ import uuid
 class Verification(models.Model):
     user_id = models.IntegerField()
     code = models.UUIDField(default=uuid.uuid4, unique=True)
+
+
+class ForgotPassword(models.Model):
+    user_id = models.IntegerField()
+    code = models.UUIDField(default=uuid.uuid4, unique=True)
